@@ -19,8 +19,8 @@ const generate = (privateKey, { id, name, email, avatar, appId, kid }) => {
       features: {
         livestreaming: 'true',
         recording: 'true',
-        transcription: 'true',
-        "outbound-call": 'true'
+        transcription: 'false',
+        "outbound-call": 'false'
       }
     },
     iss: 'chat',
@@ -37,11 +37,11 @@ const generate = (privateKey, { id, name, email, avatar, appId, kid }) => {
  */
 const token = generate('my private key', {
     id: uuid(),
-    name: "my user name",
-    email: "my user email",
-    avatar: "my avatar url",
-    appId: "my AppID", // Your AppID ( previously tenant )
-    kid: "my api key"
+    name: "rafael",
+    email: "rafaelkefren@gmail.com",
+    avatar: "*",
+    appId: "vpaas-magic-cookie-ff7620b105dd4a44a38b71c62bb3c05a", // Your AppID ( previously tenant )
+    kid: "vpaas-magic-cookie-ff7620b105dd4a44a38b71c62bb3c05a/866117-SAMPLE_APP"
 });
 
 console.log(token);
